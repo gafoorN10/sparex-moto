@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPAREX MOTO | Two-Wheeler Spare Parts</title>
+<meta name="description" content="SPAREX MOTO - Two-wheeler spare parts and accessories for Honda, TVS, Bajaj, Yamaha and more.">
+<style>
+:root{--bg:#090909;--card:#151515;--muted:#a8a8a8;--line:#282828;--accent:#f5f5f5;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:#fff}
+a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:900;letter-spacing:1.5px;font-size:23px}.logo span{font-weight:500;color:#aaa}
+nav{display:flex;gap:24px;color:#ccc;font-size:14px}nav a:hover{color:#fff}
+.cart{border:1px solid #444;border-radius:999px;padding:9px 14px;font-size:13px}.cart b{background:#fff;color:#000;border-radius:50%;padding:2px 6px;margin-left:5px}
+.hero{padding:74px 0 60px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 85% 25%,#292929 0,#111 28%,#090909 62%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#aaa;font-size:12px}
+h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:14px 0 20px;letter-spacing:-3px}.hero p{color:#bdbdbd;max-width:620px;font-size:17px;line-height:1.6}
+.btn{display:inline-block;margin-top:16px;background:#fff;color:#000;padding:14px 22px;border-radius:7px;font-weight:800;font-size:14px}.btn.secondary{background:transparent;color:#fff;border:1px solid #555;margin-left:8px}
+.hero-card{min-height:330px;border:1px solid #333;border-radius:20px;background:linear-gradient(145deg,#1c1c1c,#0d0d0d);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;overflow:hidden;position:relative}
+.hero-card:before{content:"SPAREX";position:absolute;right:-20px;top:25px;font-size:70px;font-weight:900;color:#fff;opacity:.035;transform:rotate(-12deg)}
+.hero-card .bike{font-size:100px;text-align:center;margin-bottom:10px;filter:grayscale(1)}
+.hero-card strong{font-size:22px}.hero-card small{color:#999;margin-top:5px}
+section{padding:60px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:26px}.section-head h2{font-size:32px;margin:0}.section-head p{color:#999;margin:0}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{padding:25px;border:1px solid var(--line);background:var(--card);border-radius:14px}.cat .icon{font-size:30px}.cat h3{margin:14px 0 6px}.cat p{margin:0;color:#999;font-size:13px}
+.search{display:flex;gap:10px;margin-bottom:25px}.search input{flex:1;background:#121212;border:1px solid #333;color:#fff;border-radius:8px;padding:14px 16px;font-size:15px}.search button{background:#fff;border:0;border-radius:8px;padding:0 20px;font-weight:800}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}.product-img{height:180px;display:grid;place-items:center;background:#111;font-size:65px}.product-body{padding:16px}.product small{color:#999}.product h3{font-size:16px;margin:7px 0}.fit{color:#999;font-size:12px;line-height:1.45;min-height:34px;margin:0}.price{font-weight:900;margin:10px 0 13px}.add{width:100%;padding:10px;border-radius:7px;border:1px solid #555;background:#fff;color:#000;font-weight:800;cursor:pointer}.wa-order{display:block;text-align:center;margin-top:9px;font-size:12px;color:#ddd;border:1px solid #444;border-radius:7px;padding:9px}.cart-section{padding-top:20px}.cart-box{border:1px solid #303030;background:#111;border-radius:16px;padding:22px}.empty{color:#888}.cart-row{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 0;border-bottom:1px solid #292929}.cart-row small{display:block;color:#999;margin-top:4px}.cart-row button{background:transparent;color:#aaa;border:1px solid #444;border-radius:6px;padding:7px 10px}.cart-total{display:flex;justify-content:space-between;font-size:18px;padding:18px 0}.delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 16px}.delivery-grid>div{border:1px solid #292929;border-radius:10px;padding:14px;color:#ddd}.delivery-grid span{color:#999;font-size:12px}.btn.disabled{opacity:.4;pointer-events:none}.product-img{position:relative}.product-img span{position:absolute;right:10px;top:10px;font-size:10px;letter-spacing:1px;color:#888;font-weight:800}
+.brands{display:flex;flex-wrap:wrap;gap:10px}.brand{border:1px solid #383838;border-radius:999px;padding:11px 18px;color:#ccc;background:#111}
+.cta{background:#151515;border:1px solid #303030;border-radius:20px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0 0 8px}.cta p{margin:0;color:#aaa}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#888;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}.wa{position:fixed;right:18px;bottom:18px;background:#fff;color:#000;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 10px 30px #000}
+@media(max-width:850px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero-card{min-height:260px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.cta,.foot{flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.nav{height:64px}.hero{padding:48px 0}.categories,.products{grid-template-columns:1fr}.hero-card .bike{font-size:75px}h1{letter-spacing:-2px}.btn.secondary{margin-left:0}.cta{padding:25px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">SPAREX <span>MOTO</span></a>
+    <nav><a href="#parts">Parts</a><a href="#categories">Categories</a><a href="#brands">Brands</a><a href="#contact">Contact</a></nav>
+    <a class="cart" href="#cart">Cart <b id="cartCount">0</b></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Two-Wheeler Spare Parts & Accessories</div>
+      <h1>Parts That Keep You Moving.</h1>
+      <p>Quality-focused spare parts and accessories for Honda, TVS, Bajaj, Yamaha and more. Find the right part for your ride.</p>
+      <a class="btn" href="#parts">Shop Parts →</a>
+      <a class="btn secondary" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20to%20enquire%20about%20a%20spare%20part." target="_blank">WhatsApp Us</a>
+    </div>
+    <div class="hero-card">
+      <div class="bike">🏍️</div>
+      <strong>SPAREX MOTO</strong>
+      <small>Parts & accessories for everyday riders.</small>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+<div class="container">
+  <div class="section-head"><div><h2>Shop by Category</h2><p>Browse popular two-wheeler essentials.</p></div></div>
+  <div class="categories">
+    <div class="cat"><div class="icon">⚙️</div><h3>Engine Parts</h3><p>Filters, plugs, gaskets & more.</p></div>
+    <div class="cat"><div class="icon">🔋</div><h3>Electrical</h3><p>Bulbs, switches, batteries & more.</p></div>
+    <div class="cat"><div class="icon">🛞</div><h3>Brakes & Wheels</h3><p>Brake parts, cables & wheel items.</p></div>
+    <div class="cat"><div class="icon">🧰</div><h3>Accessories</h3><p>Useful upgrades for your ride.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="parts">
+<div class="container">
+  <div class="section-head"><div><h2>Featured Parts</h2><p>Competitive reference pricing — final price depends on model, stock and variant.</p></div></div>
+  <div class="search"><input id="search" placeholder="Search spare parts..."><button onclick="filterProducts()">Search</button></div>
+
+  <div class="products" id="productGrid">
+    <article class="product" data-name="hero air cleaner filter hf deluxe splendor passion">
+      <div class="product-img">🧰<span>HERO</span></div>
+      <div class="product-body"><small>Engine • Hero</small><h3>Genuine Air Cleaner Filter</h3><p class="fit">HF 100 / HF Deluxe / Splendor+ / Passion Pro</p><div class="price">₹249</div><button class="add" onclick="addCart('Genuine Air Cleaner Filter')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20the%20Genuine%20Air%20Cleaner%20Filter%20for%20HF%20%2F%20HF%20Deluxe%20%2F%20Splendor%2B.%20Please%20confirm%20availability." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="hero spark plug hf deluxe splendor passion">
+      <div class="product-img">⚡<span>HERO</span></div>
+      <div class="product-body"><small>Electrical • Hero</small><h3>Genuine Spark Plug</h3><p class="fit">HF 100 / HF Deluxe / Splendor+ / Passion Pro</p><div class="price">₹149</div><button class="add" onclick="addCart('Genuine Spark Plug')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20the%20Genuine%20Spark%20Plug.%20Please%20confirm%20compatibility%20and%20availability." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="hero brake shoe brake pad hf deluxe splendor">
+      <div class="product-img">🛞<span>HERO</span></div>
+      <div class="product-body"><small>Brakes • Hero</small><h3>Genuine Brake Shoe / Pad</h3><p class="fit">HF 100 / HF Deluxe / Splendor+ and selected models</p><div class="price">₹179</div><button class="add" onclick="addCart('Genuine Brake Shoe')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20the%20Genuine%20Brake%20Shoe%20%2F%20Pad.%20Please%20confirm%20compatibility." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="hero headlight bulb head light bulb">
+      <div class="product-img">💡<span>HERO</span></div>
+      <div class="product-body"><small>Lighting • Hero</small><h3>Genuine Head Light Bulb</h3><p class="fit">For multiple compatible Hero two-wheelers</p><div class="price">₹199</div><button class="add" onclick="addCart('Genuine Head Light Bulb')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20the%20Genuine%20Head%20Light%20Bulb.%20Please%20confirm%20compatibility." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="hero chain sprocket kit hf passion splendor">
+      <div class="product-img">⛓️<span>HERO</span></div>
+      <div class="product-body"><small>Drive • Hero</small><h3>Genuine Chain Sprocket Kit</h3><p class="fit">HF / Passion / Splendor families — verify model</p><div class="price">₹949</div><button class="add" onclick="addCart('Genuine Chain Sprocket Kit')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20want%20the%20Genuine%20Chain%20Sprocket%20Kit.%20Please%20confirm%20my%20bike%20model%20compatibility." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="honda activa air filter">
+      <div class="product-img">🧰<span>HONDA</span></div>
+      <div class="product-body"><small>Engine • Honda</small><h3>Activa Air Filter</h3><p class="fit">Popular Activa fitment — confirm generation</p><div class="price">From ₹299</div><button class="add" onclick="addCart('Honda Activa Air Filter')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20need%20a%20Honda%20Activa%20air%20filter.%20My%20model%20year%20is%20____." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="yamaha fz v3 air filter">
+      <div class="product-img">🧰<span>YAMAHA</span></div>
+      <div class="product-body"><small>Engine • Yamaha</small><h3>FZ V3 Air Filter</h3><p class="fit">FZ V3 — confirm model/year before order</p><div class="price">From ₹249</div><button class="add" onclick="addCart('Yamaha FZ V3 Air Filter')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20need%20a%20Yamaha%20FZ%20V3%20air%20filter.%20Please%20confirm availability." target="_blank">Order on WhatsApp</a></div>
+    </article>
+    <article class="product" data-name="led headlight bulb bike">
+      <div class="product-img">💡<span>LED</span></div>
+      <div class="product-body"><small>Accessory • Lighting</small><h3>H4 LED Headlight</h3><p class="fit">Universal/compatible models vary — verify fitment</p><div class="price">From ₹599</div><button class="add" onclick="addCart('H4 LED Headlight')">Add to Cart</button><a class="wa-order" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20I%20need%20an%20H4%20LED%20headlight.%20My%20bike%20is%20____." target="_blank">Order on WhatsApp</a></div>
+    </article>
+  </div>
+
+</div>
+</section>
+
+<section id="brands">
+<div class="container">
+  <div class="section-head"><div><h2>Brands We Cover</h2><p>Brand availability depends on current stock.</p></div></div>
+  <div class="brands">
+    <span class="brand">Honda</span><span class="brand">TVS</span><span class="brand">Bajaj</span><span class="brand">Yamaha</span><span class="brand">Suzuki</span><span class="brand">Hero</span><span class="brand">Royal Enfield</span>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="cta">
+    <div><h2>Need help finding a part?</h2><p>Send your bike model and required part on WhatsApp.</p></div>
+    <a class="btn" href="https://wa.me/919980091086?text=Hello%20SPAREX%20MOTO%2C%20my%20bike%20model%20is%20____%20and%20I%20need%20____." target="_blank">Chat on WhatsApp</a>
+  </div>
+</div>
+</section>
+</main>
+
+<div class="container" style="padding-bottom:0"><p style="color:#777;font-size:12px;line-height:1.5">Catalogue prices are reference prices gathered from current online listings and may change. Compatibility, stock, taxes and delivery charges should be confirmed with SPAREX MOTO before an order is accepted. SPAREX MOTO is not presented as an authorized dealer for any listed manufacturer.</p></div></main>
+<footer>
+<div class="container foot">
+  <div>© 2026 SPAREX MOTO. Two-Wheeler Spare Parts & Accessories.</div>
+  <div>WhatsApp / Phone: <a href="tel:+919980091086">9980091086</a></div>
+</div>
+</footer>
+
+<a class="wa" href="https://wa.me/919980091086" target="_blank">WhatsApp</a>
+
+<script>
+const cart=[];
+function addCart(name){
+ const card=[...document.querySelectorAll('.product')].find(p=>p.querySelector('h3')?.textContent===name);
+ const priceText=card?.querySelector('.price')?.textContent||'₹0';
+ const price=parseInt(priceText.replace(/[^\d]/g,''))||0;
+ const found=cart.find(x=>x.name===name);
+ if(found) found.qty++; else cart.push({name,price,qty:1});
+ renderCart();
+ document.getElementById('cart').scrollIntoView({behavior:'smooth'});
+}
+function renderCart(){
+ const count=cart.reduce((s,x)=>s+x.qty,0);
+ document.getElementById('cartCount').textContent=count;
+ const box=document.getElementById('cartItems');
+ if(!cart.length){box.innerHTML='<p class="empty">Your cart is empty. Add a product above.</p>';}
+ else {
+   box.innerHTML=cart.map((x,i)=>`<div class="cart-row"><div><b>${x.name}</b><small>₹${x.price} × ${x.qty}</small></div><button onclick="removeItem(${i})">Remove</button></div>`).join('');
+ }
+ const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ document.getElementById('cartTotal').textContent='₹'+total;
+ const btn=document.getElementById('checkoutBtn');
+ btn.classList.toggle('disabled',!cart.length);
+}
+function removeItem(i){cart.splice(i,1);renderCart();}
+function checkoutWhatsApp(e){
+ e.preventDefault();
+ if(!cart.length)return;
+ const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ const lines=cart.map(x=>`${x.name} x ${x.qty} = ₹${x.price*x.qty}`).join('\\n');
+ const msg=`Hello SPAREX MOTO, I want to place an order.\\n\\n${lines}\\n\\nEstimated total: ₹${total}\\n\\nPlease confirm availability, bike compatibility, delivery charges and final payable amount.`;
+ window.open('https://wa.me/919980091086?text='+encodeURIComponent(msg),'_blank');
+}
+function filterProducts(){
+ const q=document.getElementById('search').value.toLowerCase().trim();
+ document.querySelectorAll('.product').forEach(p=>p.style.display=(!q||p.dataset.name.includes(q))?'block':'none');
+}
+document.getElementById('search').addEventListener('input',filterProducts);
+renderCart();
+</script>
+</body>
+</html>
